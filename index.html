@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="menu">
+    <li>items-1</li>
+    <li>items-2</li>
+    <li>items-3</li>
+    <li>items-4</li>
+    <li>items-5</li>
+  </ul>
+
+  <div id="root">
+
+  </div>
+  <script>
+    let menu = document.getElementById('menu');
+    menu.style.backgroundColor = "blue";
+    console.dir(document);
+    let root = document.getElementById('root');
+
+    let list = ["items-1", "items-2", "items-3", "items-4", "items-5"];
+
+
+    for (let i = 0; i < list.length; i++) {
+      let ul = document.createElement("ul");
+      let li = document.createElement("li");
+
+      if( i > 2){
+        li.style.color = "red";
+      }
+      else {
+        li.style.color = "green";
+      }
+      root.appendChild(ul);
+      li.textContent = list[i];
+      ul.appendChild(li);
+
+
+    }
+
+  </script>
+
+</body>
+
+</html>
